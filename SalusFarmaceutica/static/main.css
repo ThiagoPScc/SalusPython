@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Matemasie", sans-serif;
+}
+
+body{
+    /*background-image: url("img/back.png", 0.1);*/
+    background: line
+;
+
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    position:fixed;
+    display: flex;
+    height: 80px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: #FCFCFC;
+    z-index: 1;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+#conteudo{
+	 width: 80%;
+    height: 320%;
+    margin: auto;
+    box-shadow: 0px 0px 20px #ccc;
+    background: #fff
+}
+
+#cabecalho{
+	width:80%;
+	justify-content: center;
+    align-items: center;
+	display: flex;
+
+}
+
+#logo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: #000000
+}
+
+#logo img{
+    margin-left: 20px;
+    padding: 0 10px;
+    height: 45px;
+}
+
+#logo h4{
+    font-size: 1.6rem;
+}
+
+#logo h3{
+    font-size: 1rem;
+    letter-spacing:5px;
+}
+
+#nav-itens{
+    flex: 2;
+}
+
+#nav-itens ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#nav-itens ul li a{
+    padding-left: 60px;
+    color: #000000;
+	font-weight:bold;
+}
+
+#nav-itens ul li a:hover{
+    color: #E88612
+}
+
+#nav-itens ul li input{
+    margin-left: 50px;
+    padding: 10px 5px;
+    border: none;
+	background-color:#F2F2F2;
+    border-radius: 10px 0 0 10px;
+}
+#nav-itens ul li input:focus{
+    margin-left: 50px;
+    padding: 10px 5px;
+    border: none;
+	background-color:#fff;
+	border-radius: 10px 0 0 10px;
+	outline: none; 
+}
+
+#nav-itens ul #lupa{
+    background-color: #77BFA3;
+    border-radius: 0 10px 10px 0;
+}
+
+#nav-itens ul li img{
+    padding: 4px;
+    height: 30px;
+}
+
+#links-main ul{
+    display: flex;
+    justify-content: right;
+    align-items: center;    
+}
+
+#links-main ul li img{
+    height: 25px;   
+    padding-right: 10px;
+}
+
+#links-main{
+    flex: 1;
+    text-align: right;
+    margin-right: 30px;
+}
+
+#links-main ul #cesta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #77BFA3;
+    border-radius:  10px 0 0 10px;
+    padding: 6px 10px;
+	font-weight:bold;
+    color: #000000;
+}
+#links-main ul #cesta:hover{
+    background-color: #86D0B4;
+}
+
+
+#links-main ul #cesta img{ 
+    margin: 0 0 0 15px;
+}
+
+#links-main ul #btn-login{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	gap:10px;
+    padding: 6px 10px;
+	font-weight:bold;
+    color: #000000;
+    background-color: #6CAD94;
+    border-radius:  0 10px 10px 0;
+}
+#links-main ul #btn-login:hover{
+    background-color: #77BFA3;
+}
+
+
+main{
+	background-image: url("https://github.com/ThiagoPScc/SarusFarmaceutica/blob/main/BacanaFarma/Frame%203.png?raw=true");
+}
+
+#text-departamento{
+    padding-top: 80px;
+    padding-left: 40px;
+    font-size: 1.6rem;
+    color: #1E4B75;
+}
+
+#departamentos{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+	padding-bottom:60px;
+}
+
+#departamentos #card{
+    padding: 10px;
+    width: 151px;
+    height: 89px;
+    background-color: #518AB6;
+    border: #1E4B75 5px solid;
+    border-radius: 10px;
+}
+
+
+#departamentos #card img{
+    height: 60px;
+}
+
+#departamentos #card p{
+    margin-top: 30px;
+    color: #1E4B75;
+    font-size: 1.1rem;
+}
+
+#img-divisao{
+    margin: auto;
+}
+
+.divisao{
+    width: 100%;
+    text-align: center;
+}
+
+#containerProdutos{
+	
+
+}
+
+.linhaProduto{
+	display:flex;
+	margin:auto;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding:40px;
+	gap:5em;
+
+	
+}
+
+.produto{
+	min-width:25%;
+	min-height:352px;
+	height:auto;
+	width:auto;
+	background-color:#518AB6;
+	border-radius:10px;
+}
+.produto:hover{
+	min-width:25%;
+	min-height:352px;
+	height:auto;
+	width:auto;
+	background-color:#E88612;
+	border-radius:10px;
+}
+
+
+#banner{
+	margin-top:10px;
+	min-width:100%;
+	min-height:200px;
+	height:auto;
+	width:auto;
+	background-color:#518AB6;
+}
+/* Slideshow  */
+header{
+    width: 100%;
+    height: 55vh;
+    margin: auto;
+    background-color: #549CCE;
+}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 16px 12px;
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+ background: rgba(0, 0, 0, .4)
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  font-weight:bold;
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, .4) ;
+  border-radius:0px 0px 10px 0px;
+}
+
+footer{
+	width:100%;
+	height:100px;
+	background-color:#FFF;
+	box-shadow: 0px 0px 10px #ccc;
+}
+

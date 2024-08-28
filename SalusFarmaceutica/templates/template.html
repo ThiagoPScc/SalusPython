@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BacanaFarma</title>
+    <link rel="stylesheet" href="../static/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="icon" type="image/png" href="img/logo.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+	<div id="cabecalho">
+      <div id="logo">
+        <img src="../static/logo.png" alt="Bacana Farma" />
+        <div id="logo-text">
+          <h4>Salus</h4>
+          <h3>Farmaceutica</h3>
+        </div>
+      </div>
+      <div id="nav-itens">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Promotion</a></li>
+          <li><input type="text" name="search" id="search" /></li>
+          <li id="lupa"><img src="../static/lupa.svg" alt="pesquisa" /></li>
+        </ul>
+      </div>
+      <div id="links-main">
+        <ul>
+          <li id="cesta">
+            Cesta<a href="#"
+              ><img src="../static/cesta.png" alt="cesta de compra"
+            /></a>
+          </li>
+          <li>
+		  <li id="btn-login">
+            Entrar<a href="#"
+              ><img src="../static/fotoperfil.png" alt="fazer login"
+            /></a>
+
+          </li>
+        </ul>
+      </div>
+	 </div>
+    </nav>
+
+	{% block conteudo %} {% endblock %}
+
+   <footer>
+
+   </footer>
+  </body>
+</html>
