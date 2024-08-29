@@ -1,0 +1,99 @@
+{% extends "template.html" %}
+{% block conteudo%}
+<header>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="../static/banner1.png" style="width:100%">
+            <div class="text">Texto1</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="../static/banner2.png" style="width:100%">
+            <div class="text">Texto2</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="../static/banner1.png" style="width:100%">
+            <div class="text">Txto3</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+</header>
+<main>
+    <div id="conteudo">
+        <h3 id="text-departamento">Encontre por departamento</h3>
+        <div id="departamentos">
+            <div id="card">
+                <a href="#">
+                    <img src="../static/dep_perfume.png" alt="departamento perfume"/>
+                    <p>Perfume</p>
+                </a>
+            </div>
+            <div id="card">
+                <a href="#">
+                    <img src="../static/dep_remedio.png" alt="departamento remedio"/>
+                    <p>Remedio</p>
+                </a>
+            </div>
+            <div id="card">
+                <a href="#">
+                    <img src="../static/dep_manipulacao.png" alt="departamento manipulacao"/>
+                    <p>Manipulação</p>
+                </a>
+            </div>
+            <div id="card">
+                <a href="#">
+                    <img src="../static/dep_oferta.png" alt="departamento oferta"/>
+                    <p>Oferta</p>
+                </a>
+            </div>
+            <div id="card">
+                <a href="#">
+                    <img src="../static/dep_cosmetico.png" alt="departamento cosmetico"/>
+                    <p>Cosmetico</p>
+                </a>
+            </div>
+        </div>
+        <div class="divisao">
+            <img src="../static/div.png" alt="divisao" id="img-divisao">
+        </div>
+
+        <section id="container-promocoes">
+            {% for item in products_promotion %}
+                <div class="produto">
+                    <img src={{item.img}} alt={{item.nome}}/>
+                    <div class="product_name">
+                        <h3>{{item.nome}}</h3>
+                    </div>
+                        <h2>R${{item.preco}}</h2>
+                </div>
+                {% endfor %}
+        </section>
+        <div class="divisao">
+            <img src="../static/div.png" alt="divisao" id="img-divisao">
+        </div>
+        <section id="produtos">
+            <div id="container-produtos">
+                {% for item in products %}
+                <div class="produto">
+                    <img src={{item.img}} alt={{item.nome}}/>
+                    <div class="product_name">
+                        <h3>{{item.nome}}</h3>
+                    </div>
+                        <h2>R${{item.preco}}</h2>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</main>
+<script src="../static/js.js"></script>
+{% endblock %}
