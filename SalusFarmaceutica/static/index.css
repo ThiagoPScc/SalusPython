@@ -139,12 +139,9 @@ header{
     flex: 1 0 250px;
     max-width: 340px;
 	height:350px;
-	background-color:#518AB6;
+	background-color:rgba(0,0,0,0.1);
 	border-radius:10px;
 	text-align:center
-}
-.produto:hover{
-	background-color:#E88612;
 }
 
 .produto img{
@@ -152,30 +149,39 @@ header{
     height: 180px;
 }
 
-.product_name{
-    margin-top: 20px;
-    height: 30px
-}
-
-.product_name h3{
-    width: 80%;
+.produto h2{
+    width: 85%;
     margin:auto;
-    margin-top:20px;
+    margin-top:30px;
     font-size: 1.1rem;
     font-weight: 100;
 
     overflow: hidden;
    display: -webkit-box;
-   -webkit-line-clamp: 2; /* number of lines to show */
-           line-clamp: 2;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1;
    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
-.produto h2{
+.produto p{
     bottom:20px;
-    font-size: 2rem;
-    margin-top: 20px
+    font-size: 1.8rem;
+    margin-top: 10px
 }
+
+.btn-buy {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    padding:10px 0;
+    border-radius: 0 0 10px 10px;
+    background-color:rgba(0,0,0,0.1);
+    color: #000;
+}
+.btn-buy:hover {
+    background-color:rgba(0,0,0,0.2);
+}
+
 
 
 #banner{

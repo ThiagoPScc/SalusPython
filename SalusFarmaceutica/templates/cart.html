@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+{% block conteudo%}
+  <main>
+    <div id="cart-main">
+      <div class="cart-list">
+        {% if cart %}
+              {% for item in cart %}
+              <div class="product">
+                <a href="#"><img src="" alt=""></a>
+                <div class="product-image">
+                  <img src={{"../static/" + item.product.img }} alt={{ item.name }}>
+                </div>
+                <div class="product-details">
+                  <h2>{{ item.product.name }}</h2>
+                  <p>{{item.product.details}}</p>
+                  <div class="product-price-quantity">
+                    <p>Quantidade: {{item.quantity}}</p>
+                    R$ {{ "%.2f"|format(item.product.price * item.quantity) }}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+        {% else %}
+            <p>Seu carrinho está vazio.</p>
+        {% endif %}
+      </div>
+      <div id="cart-payment">
+
+      </div>
+    </div>
+  </main>
+<link rel="stylesheet" href="../static/cart.css" />
+{% endblock %}

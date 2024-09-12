@@ -67,13 +67,12 @@
         </div>
 
         <section id="container-promocoes">
-            {% for item in products_promotion %}
+            {% for product in products_promotion %}
                 <div class="produto">
-                    <img src={{item.img}} alt={{item.nome}}/>
-                    <div class="product_name">
-                        <h3>{{item.nome}}</h3>
-                    </div>
-                        <h2>R${{item.preco}}</h2>
+                    <img src={{"../static/" + product.img}} alt={{product.name}}>
+                    <h2>{{ product.name }}</h2>
+                    <p>R$ {{  "%.2f"|format(product.price) }}</p>
+                    <a href="{{ url_for('add_to_cart', product_id=product.id) }}" class="btn-buy">Adicionar a Cesta</a>
                 </div>
                 {% endfor %}
         </section>
@@ -82,13 +81,12 @@
         </div>
         <section id="produtos">
             <div id="container-produtos">
-                {% for item in products %}
+                {% for product in products %}
                 <div class="produto">
-                    <img src={{item.img}} alt={{item.nome}}/>
-                    <div class="product_name">
-                        <h3>{{item.nome}}</h3>
-                    </div>
-                        <h2>R${{item.preco}}</h2>
+                    <img src={{"../static/" + product.img}} alt={{product.name}}>
+                    <h2>{{ product.name }}</h2>
+                    <p>R$ {{  "%.2f"|format(product.price) }}</p>
+                    <a href="{{ url_for('add_to_cart', product_id=product.id) }}" class="btn-buy">Adicionar a Cesta</a>
                 </div>
                 {% endfor %}
             </div>
@@ -96,4 +94,5 @@
     </div>
 </main>
 <script src="../static/js.js"></script>
+<link rel="stylesheet" href="../static/index.css" />
 {% endblock %}

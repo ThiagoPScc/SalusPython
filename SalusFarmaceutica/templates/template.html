@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BacanaFarma</title>
     <link rel="stylesheet" href="../static/main.css" />
-    <link rel="stylesheet" href="../static/index.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,8 +26,8 @@
       </div>
       <div id="nav-itens">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Promotion</a></li>
+          <li><a href="{{ url_for('index') }}" class="back-button">Início</a></li>
+          <li><a href="#">Sobre Nós</a></li>
           <li><input type="text" name="search" id="search" /></li>
           <li id="lupa"><img src="../static/lupa.svg" alt="pesquisa" /></li>
         </ul>
@@ -36,9 +35,9 @@
       <div id="links-main">
         <ul>
           <li id="cesta">
-            Cesta<a href="#"
-              ><img src="../static/cesta.png" alt="cesta de compra"
-            /></a>
+            Cesta<a href="{{ url_for('show_cart') }}" class="cart-button">
+              <img src="../static/cesta.png" alt="cesta de compra"/>
+          </a>
           </li>
           <li>
 		  <li id="btn-login">
