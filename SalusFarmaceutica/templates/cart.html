@@ -6,16 +6,17 @@
         {% if cart %}
               {% for item in cart %}
               <div class="product">
-                <a href="#"><img src="" alt=""></a>
                 <div class="product-image">
                   <img src={{"../static/" + item.product.img }} alt={{ item.name }}>
                 </div>
                 <div class="product-details">
+                  <a href="{{ url_for('add_to_cart', product_id=item.product.id, tela='cart')}}"><img src="../static/add-item.png" alt="adicionar ao carrinho" class="img-add-item"></a>
+                  <a href="{{ url_for('remove_from_cart', item_id=item.product.id) }}"><img src="../static/lixeira.png" alt="lixeira" class="img-lixeira"></a>
                   <h2>{{ item.product.name }}</h2>
                   <p>{{item.product.details}}</p>
-                  <div class="product-price-quantity">
+                  <div class="product-quantity-price">
                     <p>Quantidade: {{item.quantity}}</p>
-                    R$ {{ "%.2f"|format(item.product.price * item.quantity) }}
+                    <h2>R$ {{ "%.2f"|format(item.product.price * item.quantity) }}</h2>
                   </div>
                 </div>
               </div>
@@ -25,7 +26,7 @@
         {% endif %}
       </div>
       <div id="cart-payment">
-
+        total: {{total}}
       </div>
     </div>
   </main>

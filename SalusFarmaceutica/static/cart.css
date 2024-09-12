@@ -20,10 +20,10 @@ main{
 .product{
     display: flex;
     align-items: center;
-    height: 250px;
+    height: 200px;
     border: 2px solid #000;
     border-radius: 10px;
-
+    position: relative;
 }
 
 .product:not(:first-child){
@@ -31,16 +31,44 @@ main{
 }
 
 .product-image img{
-    height:200px;
+    height:160px;
 }
 
-#product-details{
-    width: 300px;
+.product-details{
+    padding: 25px;
+    text-align: justify
+}
+
+.product-details .img-add-item{
+    width: 25px;
+    position: absolute;
+    right: 70px
+}
+
+.product-details .img-lixeira{
+    width: 25px;
+    position: absolute;
+    right: 25px
+}
+
+.product-details p{
+    padding-top: 25px
+}
+
+.product-quantity-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px
+}
+
+.product-quantity-price p{
+    padding-top: 0
 }
 
 #cart-payment{
     flex: 2;
     border: 2px solid #000;
     border-radius: 10px;
-    height: 540px;
+    height: 340px;
 }

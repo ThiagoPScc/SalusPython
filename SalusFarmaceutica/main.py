@@ -46,26 +46,44 @@ cart = []
 def index():
     return render_template('index.html', products = products, products_promotion=products_promotion)
 
-@app.route('/add_to_cart/<int:product_id>')
-def add_to_cart(product_id):
+@app.route('/add_to_cart/<int:product_id>/<string:tela>')
+def add_to_cart(product_id, tela):
     product = next((p for p in products if p['id'] == product_id), None)
 
     if product:
-        # Verifica se o produto já está no carrinho
+        # Check if the product is already in the cart
         for item in cart:
             if item['product']['id'] == product_id:
                 item['quantity'] += 1
                 break
         else:
-            # Adiciona o produto ao carrinho com quantidade inicial de 1
+            # Product is not in the cart, add it
             cart.append({'product': product, 'quantity': 1})
-    return redirect(url_for('index'))
+
+    if (tela == 'cart'):
+        return redirect(url_for('show_cart'))
+    else:
+        return redirect(url_for('index'))
+
+@app.route('/remove_from_cart/<int:item_id>')
+def remove_from_cart(item_id):
+    # Find the item in the cart
+    for item in cart:
+        if item['product']['id'] == item_id:
+            item['quantity'] -= 1
+            if item['quantity'] <= 0:
+                cart.remove(item)
+            break
+    return redirect(url_for('show_cart'))
 
 @app.route('/cart')
 def show_cart():
-    return render_template('cart.html', cart=cart)
+    total = 0.0
+    for item in cart:
+        product_price = item['product']['price']
+        total += product_price * item['quantity']
+
+    return render_template('cart.html', cart=cart, total=total)
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-app.run(debug=True)
