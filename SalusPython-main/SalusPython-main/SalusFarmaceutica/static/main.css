@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Matemasie", sans-serif;
+    
+}
+
+body{
+    /*background-image: url("img/back.png", 0.1);*/
+    background: line
+;
+
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    position:fixed;
+    display: flex;
+    height: 80px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: #FCFCFC;
+    z-index: 1;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+#cabecalho{
+	width:80%;
+	justify-content: center;
+    align-items: center;
+	display: flex;
+
+}
+
+#logo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: #000000
+}
+
+#logo img{
+    margin-left: 20px;
+    padding: 0 10px;
+    height: 45px;
+}
+
+#logo h4{
+    font-size: 1.6rem;
+}
+
+#logo h3{
+    font-size: 1rem;
+    letter-spacing:5px;
+}
+
+#nav-itens{
+    flex: 2;
+}
+
+#nav-itens ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+#nav-itens ul li a{
+    padding-left: 60px;
+    color: #000000;
+	font-weight:bold;
+}
+
+#nav-itens ul li a:hover{
+    color: #E88612
+}
+
+#nav-itens ul li input{
+    margin-left: 50px;
+    padding: 10px 5px;
+    border: none;
+	background-color:#F2F2F2;
+    border-radius: 10px 0 0 10px;
+}
+#nav-itens ul li input:focus{
+    margin-left: 50px;
+    padding: 10px 5px;
+    border: none;
+	background-color:#fff;
+	border-radius: 10px 0 0 10px;
+	outline: none; 
+}
+
+#nav-itens ul #lupa{
+    background-color: #77BFA3;
+    border-radius: 0 10px 10px 0;
+}
+
+#nav-itens ul li img{
+    padding: 4px;
+    height: 30px;
+}
+
+#links-main ul{
+    display: flex;
+    justify-content: right;
+    align-items: center;    
+}
+
+#links-main ul li img{
+    height: 25px;   
+    padding-right: 10px;
+}
+
+#links-main{
+    flex: 1;
+    text-align: right;
+    margin-right: 30px;
+}
+
+#links-main ul #cesta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #77BFA3;
+    border-radius:  10px 0 0 10px;
+    padding: 6px 10px;
+	font-weight:bold;
+    color: #000000;
+}
+#links-main ul #cesta:hover{
+    background-color: #86D0B4;
+}
+
+
+#links-main ul #cesta img{ 
+    margin: 0 0 0 15px;
+}
+
+#links-main ul #btn-login{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	gap:10px;
+    padding: 6px 10px;
+	font-weight:bold;
+    color: #000000;
+    background-color: #6CAD94;
+    border-radius:  0 10px 10px 0;
+}
+#links-main ul #btn-login:hover{
+    background-color: #77BFA3;
+}
+
+main{
+	background-image: url("https://github.com/ThiagoPScc/SarusFarmaceutica/blob/main/BacanaFarma/Frame%203.png?raw=true");
+}
+
+footer{
+	width:100%;
+	height:100px;
+	background-color:#FFF;
+	box-shadow: 0px 0px 10px #ccc;
+	bottom: 0px;
+}
+

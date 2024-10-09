@@ -1,0 +1,58 @@
+{% extends "template.html" %}
+{% block conteudo%}
+  <main>
+    <div id="cart-main">
+      <div class="cart-list">
+        {% if cart %}
+              {% for item in cart %}
+              <div class="product">
+                <div class="product-image">
+                  <img src={{"../static/" + item.product.img }} alt={{ item.name }}>
+                </div>
+                <div class="product-details">
+                  <a href="{{ url_for('add_to_cart', product_id=item.product.id, tela='cart')}}"><img src="../static/add-item.png" alt="adicionar ao carrinho" class="img-add-item"></a>
+                  <a href="{{ url_for('remove_unity_from_cart', item_id=item.product.id) }}"><img src="../static/excluir.png" alt="diminuir" class="img-diminuir"></a>
+                    <a href="{{ url_for('remove_product_from_cart', item_id=item.product.id) }}"><img src="../static/lixeira.png" alt="diminuir" class="img-lixeira"></a>
+                  <h2>{{ item.product.name }}</h2>
+                  <p>{{item.product.details}}</p>
+                  <div class="product-quantity-price">
+                    <p>Quantidade: {{item.quantity}}</p>
+                    <h2>R$ {{ "%.2f"|format(item.product.price * item.quantity) }}</h2>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+        {% else %}
+            <p>Seu carrinho está vazio.</p>
+        {% endif %}
+      </div>
+      <div id="cart-payment">
+        <div id="totalValor">
+         <p class="carrinhoTotal">total: R${{total}}</p>
+         
+        </div>
+        <div id="pagamento">
+          <input type="radio" id="cartao" name="fav_language" value="HTML">
+          <label class="txtPag" for="cartao">Cartão de debito/crédito</label><br>
+          <input type="radio" id="pix" name="fav_language" value="CSS">
+          <label class="txtPag" for="pix">Pix</label><br>
+          <input type="radio" id="boleto" name="fav_language" value="CSS">
+          <label class="txtPag" for="boleto">Boleto</label><br>
+        </div>
+        {% if not frete %}
+        <form id="cep" action="/calcular_frete" method="post">
+          <p class="cepInput">Digite seu cep para caucular o frete</p>
+          <input class="cepInput2" type="text" id="cep" name="cep" placeholder="Digite seu cep" required>
+          <input class="cepbtn"type="submit" id="cepbtn" value="calcular">
+        </form>
+        {% else %}
+        <p>{{frete}}</p>
+        {% endif %}
+        <div>
+          <input class="btnPagar" type="button" id="btnpagar" onclick="pagar()" value="comprar😀">
+        </div>
+      </div>
+    </div>
+  </main>
+<link rel="stylesheet" href="../static/cart.css" />
+{% endblock %}

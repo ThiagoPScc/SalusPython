@@ -1,0 +1,190 @@
+main{
+   padding-top: 80px;
+}
+
+#cart-main{
+    display:flex;
+    justify-content: center;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 0px 20px #ccc;
+    background: #fff;
+    padding: 40px
+}
+
+.cart-list{
+    flex: 3;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    position: relative;
+}
+
+.product:not(:first-child){
+    margin-top: 40px;
+}
+
+.product-image img{
+    height:160px;
+}
+
+.product-details{
+    padding: 25px;
+    text-align: justify
+}
+
+.product-details .img-diminuir{
+    width: 25px;
+    position: absolute;
+    right: 70px
+}
+
+.product-details .img-lixeira{
+    width: 40px;
+    padding: 4px;
+    position: absolute;
+    background-color: #fff;
+    right: -10px;
+    top: -10px;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px rgba(0,0,0, 1) ;
+}
+
+.product-details .img-add-item{
+    width: 25px;
+    position: absolute;
+    right: 30px
+}
+
+.product-details p{
+    padding-top: 25px
+}
+
+.product-quantity-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px
+}
+
+.product-quantity-price p{
+    padding-top: 0
+}
+
+#cart-payment{
+    flex: 2;
+    flex-direction: column;
+    padding: 40px 20px;
+    border-radius: 10px;
+    height: 340px;
+    box-shadow: 0 0 20px #575757;
+    justify-content: center;
+  
+}
+#totalValor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    margin: auto;
+    background-color: #6CAD94;
+    border-radius: 10px;
+    height: 25%;
+    width: 80%;
+    text-align: center;
+    padding: 2.3%;
+    box-shadow: 0px 5px 10px #838383;
+}
+.carrinhoTotal{
+    font-weight: 400;
+    font-size: 2em;
+    color:#3F403F;
+    font-family:  "Bebas Neue", sans-serif;
+
+}
+#pagamento{
+    margin: 5% 0px 2% 10%;
+}
+.txtPag{
+    font-weight: 400;
+    font-size: 1em;
+    color:#3F403F;
+    font-family:  "Bebas Neue", sans-serif;
+
+}
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    vertical-align: middle;
+    transition: border-color 0.3s;
+}
+input[type="radio"]:checked + label::before {
+    border-color: green;
+    background-color: green;
+}
+#cep{
+    color:#3F403F;
+    font-family:  "Bebas Neue", sans-serif;
+}
+.cepInput{
+    font-family:  "Bebas Neue", sans-serif;
+    margin-left: 10%;
+    width: 60%;
+    height: 5%;
+    padding: 4px;
+    
+}
+.cepInput2{
+    font-family:  "Bebas Neue", sans-serif;
+    margin-left: 10%;
+    width: 60%;
+    height: 5%;
+    padding: 4px;
+    border-radius: 5px ;
+    border: 2px solid #6CAD94;
+}
+.cepbtn{
+    width: 20%;
+    font-family:  "Bebas Neue", sans-serif;
+    background-color: #6CAD94;
+    border-radius: 5px ;
+    padding: 5px;
+    border: 0 none;
+    outline: 0;
+}
+.cepbtn:hover{
+    background-color: #E88612;
+    cursor: pointer;
+}
+.btnPagar{
+    margin: 3% 10%;
+    width: 80%;
+    background-color: #6CAD94;
+    border-radius: 5px ;
+    font-size: 1.4em;
+    padding: 7px;
+    border: 0 none;
+    outline: 0;
+    font-family:  "Bebas Neue", sans-serif;
+    color: #3F403F;
+}
+.btnPagar:hover{
+    background-color: #E88612;
+}
