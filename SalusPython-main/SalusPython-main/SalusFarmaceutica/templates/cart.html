@@ -47,9 +47,16 @@
         </form>
         {% else %}
         <p>{{frete}}</p>
+        <p>{{tempo}}</p>
         {% endif %}
         <div>
-          <input class="btnPagar" type="button" id="btnpagar" onclick="pagar()" value="comprar😀">
+          {% if not compra %}
+          <form action="/compra" method="post">
+          <input class="btnPagar" type="submit" value="comprar😀">
+          </form>
+            {% else %}
+          <h2 id='purchase-completed'>Compra Finalizada!</h2>
+          {% endif %}
         </div>
       </div>
     </div>

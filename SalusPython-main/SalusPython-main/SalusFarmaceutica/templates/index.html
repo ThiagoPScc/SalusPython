@@ -68,10 +68,11 @@
 
         <section id="container-promocoes">
             {% for product in products_promotion %}
-                <div class="produto">
+                <div class="produto-promotion">
                     <img src={{"../static/" + product.img}} alt={{product.name}}>
                     <h2>{{ product.name }}</h2>
-                    <p>R$ {{  "%.2f"|format(product.price) }}</p>
+                    <p class="price-original">R$ {{  "%.2f"|format(product.price)  }}</p>
+                    <p>R$ {{  "%.2f"|format(product.price * 0.8)  }}</p>
                     <a href="{{ url_for('add_to_cart', product_id=product.id, tela='index') }}" class="btn-buy">Adicionar a Cesta</a>
                 </div>
                 {% endfor %}

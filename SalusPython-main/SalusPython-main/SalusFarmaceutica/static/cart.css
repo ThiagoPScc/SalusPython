@@ -188,3 +188,11 @@ input[type="radio"]:checked + label::before {
 .btnPagar:hover{
     background-color: #E88612;
 }
+
+#purchase-completed{
+margin-top: 30px;
+    text-align:center;
+    font-size: 1.2rem;
+    color: green;
+    letter-spacing: 3px;
+}
